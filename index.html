@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>زیرو | طعم خالص، بدون کالری</title>
+<meta name="description" content="فست‌فود و نوشیدنی‌های زیرو کالری؛ پاستا، برگر، ساندویچ، دونات و دسر بدون عذاب وجدان.">
+<!-- favicon درون‌خطی: جلوی خطای 404 برای favicon.ico را می‌گیرد -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A5%A4%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;900&family=Lalezar&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="style.css">
+
+<!-- Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script type="module" src="https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+</head>
+<body>
+<div id="bubbles-container"></div>
+
+<header class="header" id="header">
+    <a href="#home" class="logo">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 8V16M8 12H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <span>زیرو</span>
+    </a>
+    <nav class="nav" id="nav">
+        <a href="#home" class="nav-item active">خانه</a>
+        <a href="#menu" class="nav-item">منو</a>
+        <a href="#space" class="nav-item">فضای مغازه</a>
+        <a href="#about" class="nav-item">درباره ما</a>
+        <a href="#contact" class="nav-item">تماس</a>
+    </nav>
+    <a href="#contact" class="contact-btn">تماس با ما</a>
+    <button class="burger-btn" id="burger" aria-label="منو" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+</header>
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav class="m-nav" aria-label="منوی اصلی">
+        <a href="#home" class="m-link active">خانه</a>
+        <a href="#menu" class="m-link">منو</a>
+        <a href="#space" class="m-link">فضای مغازه</a>
+        <a href="#about" class="m-link">درباره ما</a>
+        <a href="#contact" class="m-link">تماس</a>
+    </nav>
+    <a href="tel:+982112345678" class="m-cta">تماس با ما</a>
+</div>
+
+<main class="hero" id="home">
+<div class="hero-content">
+    <div class="leaves-container">
+        <model-viewer class="leaf l1" data-asset="leaves.glb" environment-image="neutral" interaction-prompt="none" camera-orbit="45deg 75deg 105%"></model-viewer>
+        <model-viewer class="leaf l2" data-asset="leaves.glb" environment-image="neutral" interaction-prompt="none" camera-orbit="-30deg 60deg 105%"></model-viewer>
+        <model-viewer class="leaf l3" data-asset="leaves.glb" environment-image="neutral" interaction-prompt="none" camera-orbit="120deg 85deg 105%"></model-viewer>
+        <model-viewer class="leaf l4" data-asset="leaves.glb" environment-image="neutral" interaction-prompt="none" camera-orbit="10deg 45deg 105%"></model-viewer>
+    </div>
+
+    <div class="hero-left">
+        <h1 class="main-title"><span class="outline">طعم خالص</span><br>زیرو کالری</h1>
+        <p class="description">طعم تازه‌ی بدون قند و بدون عذاب وجدان.<br>از نوشابه تا پاستا و برگر،<br>همه‌چیز سبک، خوشمزه و زیرو.</p>
+        <div class="cta-group"><a href="#menu" class="primary-btn" style="text-decoration:none">مشاهده منو <span class="plus-icon">+</span></a></div>
+        <div class="award-badge">
+            <div class="award-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 15L15 18L19 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="award-text"><span class="award-title">جایزه طراحی</span><span class="award-subtitle">برترین منوی سالم ۱۴۰۵</span></div>
+        </div>
+    </div>
+
+    <div class="berries-container-bg">
+        <model-viewer class="berry b7" data-asset="cherry.glb" environment-image="neutral" interaction-prompt="none" camera-orbit="-20deg 110deg 105%"></model-viewer>
+        <model-viewer class="berry b8" data-asset="cherry.glb" environment-image="neutral" interaction-prompt="none" camera-orbit="160deg 45deg 105%"></model-viewer>
+        <model-viewer class="berry b9" data-asset="cherry.glb" environment-image="neutral" interaction-prompt="none" camera-orbit="45deg 20deg 105%"></model-viewer>
+    </div>
+
+    <div class="hero-center">
+        <model-viewer id="product-model" data-asset="deit_soda2.glb" alt="نوشابه زیرو" disable-zoom touch-action="pan-y" shadow-intensity="0" environment-image="neutral" exposure="1.5" interaction-prompt="none" camera-orbit="0deg 90deg 380%" field-of-view="30deg" class="main-product-3d"></model-viewer>
+        <div id="dish" data-item="pasta">
+            <svg class="dish-art pasta" viewBox="0 0 300 300"><ellipse cx="150" cy="120" rx="112" ry="40" fill="#fff4e0"/><path d="M38 120c0 95 52 135 112 135s112-40 112-135z" fill="#f7f7f7"/><path d="M38 150c40 25 184 25 224 0" stroke="#e8e8e8" stroke-width="6" fill="none"/><ellipse cx="150" cy="108" rx="86" ry="30" fill="#f4c542"/><g fill="none" stroke="#e0a82b" stroke-width="5" stroke-linecap="round"><path d="M80 105q35-26 70 0t70 0"/><path d="M92 115q30-20 58 0t58 0"/><path d="M105 98q25-14 45 0t45 0"/></g><ellipse cx="150" cy="92" rx="44" ry="17" fill="#d62d20"/><circle cx="125" cy="86" r="12" fill="#e53935"/><circle cx="170" cy="84" r="12" fill="#c62828"/><path d="M140 70q20-30 45-12-8 26-45 12z" fill="#43a047"/><path d="M110 72q-6-26 20-26 4 22-20 26z" fill="#2e7d32"/></svg>
+            <svg class="dish-art burger" viewBox="0 0 300 300"><path d="M38 128c0-62 50-98 112-98s112 36 112 98z" fill="#e0902b"/><g fill="#fde7b0"><ellipse cx="100" cy="76" rx="9" ry="4.5"/><ellipse cx="150" cy="58" rx="9" ry="4.5"/><ellipse cx="202" cy="78" rx="9" ry="4.5"/><ellipse cx="172" cy="104" rx="9" ry="4.5"/><ellipse cx="116" cy="106" rx="9" ry="4.5"/></g><path d="M30 134q20 24 40 0t40 0 40 0 40 0 40 0 30 0v10q-20 22-40 0t-40 0-40 0-40 0-40 0-30 0z" fill="#5fbf3e"/><rect x="40" y="150" width="220" height="20" rx="10" fill="#e53935"/><path d="M42 170h216l-10 22-22-8-24 14-26-14-26 14-26-14-26 14-22-8z" fill="#ffc83d"/><rect x="34" y="176" width="232" height="36" rx="18" fill="#4e2a1a"/><path d="M38 218h224c0 32-32 52-112 52S38 250 38 218z" fill="#d9822b"/></svg>
+        </div>
+    </div>
+
+    <div class="berries-container">
+        <model-viewer class="berry b1" data-asset="cherry.glb" environment-image="neutral" exposure="1.2" interaction-prompt="none" camera-orbit="45deg 120deg 105%"></model-viewer>
+        <model-viewer class="berry b2" data-asset="cherry.glb" environment-image="neutral" exposure="1.2" interaction-prompt="none" camera-orbit="-120deg 45deg 105%"></model-viewer>
+        <model-viewer class="berry b3" data-asset="cherry.glb" environment-image="neutral" exposure="1.2" interaction-prompt="none" camera-orbit="200deg 90deg 105%"></model-viewer>
+        <model-viewer class="berry b4" data-asset="cherry.glb" environment-image="neutral" exposure="1.2" interaction-prompt="none" camera-orbit="10deg 20deg 105%"></model-viewer>
+        <model-viewer class="berry b5" data-asset="cherry.glb" environment-image="neutral" exposure="1.2" interaction-prompt="none" camera-orbit="-45deg 160deg 105%"></model-viewer>
+        <model-viewer class="berry b6" data-asset="cherry.glb" environment-image="neutral" exposure="1.2" interaction-prompt="none" camera-orbit="80deg 75deg 105%"></model-viewer>
+    </div>
+
+    <div class="hero-right">
+        <div class="product-carousel">
+            <div class="carousel-cards">
+                <div class="card active" data-flavor="classic"><img data-asset="Green Soda.png" alt="نوشابه کلاسیک"><div class="card-info"><span>نوشابه کلاسیک</span><span>۵۹ هزار تومان</span></div></div>
+                <div class="card" data-flavor="blue"><img data-asset="Blue Soda.png" alt="زیرو لایم" style="filter:brightness(.7)"><div class="card-info"><span>زیرو لایم</span><span>۵۹ هزار تومان</span></div></div>
+                <div class="card" data-flavor="pasta"><div class="emo">🍝</div><div class="card-info"><span>پاستا زیرو</span><span>۱۸۹ هزار تومان</span></div></div>
+                <div class="card" data-flavor="burger"><div class="emo">🍔</div><div class="card-info"><span>برگر زیرو</span><span>۲۴۵ هزار تومان</span></div></div>
+            </div>
+            <div class="carousel-nav"><button class="nav-arrow" id="prev" aria-label="قبلی">→</button><button class="nav-arrow" id="next" aria-label="بعدی">←</button></div>
+        </div>
+        <h2 class="side-title"><span class="outline">تازه و سبک</span><br>بدون عذاب وجدان</h2>
+    </div>
+</div>
+</main>
+
+<section class="section" id="menu">
+    <div class="section-head">
+        <h2>منوی <span>زیرو کالری</span></h2>
+        <p>همه‌ی آیتم‌ها سبک و بدون شکر افزوده طراحی شده‌اند. یک دسته را انتخاب کنید.</p>
+    </div>
+    <div class="menu-tabs" id="menu-tabs"></div>
+    <div class="menu-grid" id="menu-grid"></div>
+    <p class="menu-note">* کالری‌ها تقریبی و برای هر وعده هستند و ممکن است کمی تفاوت داشته باشند.</p>
+</section>
+
+<section class="section" id="space">
+    <div class="section-head">
+        <h2>فضای <span>مغازه</span></h2>
+        <p>جایی دنج و رنگی برای یک وقت‌گذرانی سبک؛ با دوستان یا تنها.</p>
+    </div>
+    <div class="space-grid">
+        <!-- برای عکس واقعی: style="--img:url('photo1.jpg')" -->
+        <div class="tile"><span class="big">🛋️</span><h3>سالن اصلی</h3><p>نشیمن راحت و نورپردازی گرم برای هر ساعت از روز.</p></div>
+        <div class="tile"><span class="big">🌿</span><h3>تراس سبز</h3><p>فضای باز با گیاهان و هوای تازه.</p></div>
+        <div class="tile"><span class="big">🍹</span><h3>بار نوشیدنی</h3><p>نوشابه‌های زیرو و نوشیدنی‌های خنک و گازدار.</p></div>
+        <div class="tile"><span class="big">🎶</span><h3>گوشه‌ی دنج</h3><p>مناسب قرار دو نفره یا کار با لپ‌تاپ.</p></div>
+    </div>
+</section>
+
+<section class="section" id="about">
+    <div class="about">
+        <div class="text">
+            <h2>درباره <span>ما</span></h2>
+            <p>زیرو با یک فکر ساده شروع شد: چرا خوشمزه بودن و سبک بودن باید از هم جدا باشند؟ ما فست‌فودهای محبوب را با مواد کم‌کالری و بدون قند اضافه دوباره طراحی کرده‌ایم.</p>
+            <p>از پاستا و برگر تا دونات و نوشابه، هر آیتم منو با دقت انتخاب و آزمایش می‌شود تا طعمش کامل باشد و حس سنگینی نداشته باشد.</p>
+        </div>
+        <div class="stats">
+            <div class="stat"><b>۷</b><span>دسته‌بندی منو</span></div>
+            <div class="stat"><b>۲۱</b><span>آیتم سبک و خوشمزه</span></div>
+            <div class="stat"><b>۰</b><span>شکر افزوده</span></div>
+        </div>
+    </div>
+</section>
+
+<footer id="contact">
+    <div class="foot-grid">
+        <div><a href="#home" class="logo" style="margin-bottom:1rem"><span>زیرو</span></a><p>طعم خالص، سبک و بدون کالری. هر روز تازه، هر روز زیرو.</p></div>
+        <div><h4>دسترسی سریع</h4><ul><li><a href="#menu">منو</a></li><li><a href="#space">فضای مغازه</a></li><li><a href="#about">درباره ما</a></li></ul></div>
+        <div><h4>تماس با ما</h4><ul><li>📍 تهران، خیابان نمونه، پلاک ۱۰</li><li>📞 <a href="tel:+982112345678" dir="ltr">۰۲۱-۱۲۳۴۵۶۷۸</a></li><li>🕙 هر روز ۱۰ صبح تا ۱۲ شب</li></ul></div>
+        <div><h4>ما را دنبال کنید</h4><div class="socials"><a href="#">اینستاگرام</a><a href="#">تلگرام</a><a href="#">واتساپ</a></div></div>
+    </div>
+    <div class="copy">© ۱۴۰۵ زیرو. تمامی حقوق محفوظ است.</div>
+</footer>
+
+<!-- App script -->
+<script src="script.js"></script>
+</body>
+</html>
